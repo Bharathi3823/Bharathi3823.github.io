@@ -3,17 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -26,7 +15,7 @@
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(0, 0%, 100%) 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
@@ -455,6 +444,7 @@ main {
 \*-----------------------------------*/
 
 .navbar {
+  margin-right: 0;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -462,7 +452,7 @@ main {
   background: hsla(240, 1%, 17%, 0.75);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
+  border-radius: 8px 8px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
 }
@@ -478,14 +468,14 @@ main {
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
-  padding: 20px 7px;
+  padding: 20px 1px;
   transition: color var(--transition-1);
 }
 
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+/* .navbar-link.active { color: rgb(206, 206, 72); } */
 
 
 
@@ -556,7 +546,7 @@ main {
 }
 
 
-/**
+/* /* *
  * #testimonials 
  */
 
@@ -611,7 +601,7 @@ main {
 /**
  * #testimonials-modal
  */
-
+/* 
 .modal-container {
   position: fixed;
   top: 0;
@@ -719,7 +709,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-}
+}  */
 
 
 /**
@@ -969,6 +959,10 @@ main {
 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
 
+
+
+
+
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1011,7 +1005,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+/* .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); } */
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1030,10 +1024,12 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-item-icon-box {
+/* this is for eye view symbel */
+
+/* .project-item > a:hover .project-item-icon-box {
   --scale: 1;
   opacity: 1;
-}
+} */
 
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
@@ -1062,6 +1058,66 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+
+
+/* 
+Skills in list */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+.list11 {
+  position: relative;
+}
+.list11 h2 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.list11 ul {
+  position: relative;
+}
+.list11 ul li {
+  position: relative;
+  left: 0;
+  color: #ffffff;
+  list-style: none;
+  margin: 4px 0;
+  border-left: 2px solid #ffc663;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.list11 ul li:hover {
+  left: 10px;
+}
+.list11 ul li span {
+  
+  position: relative;
+  padding: 10px;
+  padding-left: 12px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+}
+.list11 ul li:hover span {
+  color: #111;
+}
+.list11 ul li:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffc663;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+.list11 ul li:hover:before {
+  transform: scaleX(1);
+} 
+
 
 
 
@@ -1743,13 +1799,13 @@ textarea.form-input::-webkit-resizer { display: none; }
     right: 0;
     width: max-content;
     border-radius: 0 20px;
-    padding: 0 20px;
+    padding: 0 15px;
     box-shadow: none;
   }
 
   .navbar-list {
     gap: 30px;
-    padding: 0 20px;
+    padding: 0 0;
   }
 
   .navbar-link { font-weight: var(--fw-500); }
