@@ -339,7 +339,7 @@ main {
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
-  padding: 3px 12px;
+  padding: 3px 19px;
   border-radius: 8px;
 }
 
